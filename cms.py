@@ -69,9 +69,10 @@ class CMS:
         payload = {
             'name' : name,
             'uri' : name + '.space',
-            'requireCallId' : True,
-            'passcode' : PIN
+            'requireCallId' : True
             }
+        if len(PIN) > 0:
+            payload.update( {'passcode': PIN} )
         if len(tenantId) > 0:
             payload.update( {'tenant': tenantId} )
         response = a.create_coSpace(payload)
