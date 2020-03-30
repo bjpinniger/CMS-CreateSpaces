@@ -1,0 +1,8 @@
+.env
+.flaskenv
+/.vscode
+/venv
+*.log
+*.sql
+*.sqlite
+/__pycache__
